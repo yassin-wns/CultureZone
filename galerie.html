@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Galerie d’art de Pablo Picasso : explorez les œuvres en ligne.">
+  <title>Galerie – CulturaZone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">CulturaZone</a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="galerie.html" aria-current="page">Galerie</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <div class="wrap page-head">
+      <h1>Galerie Pablo Picasso</h1>
+      <p class="lead">Explorez nos œuvres virtuelles. Cliquez sur une image pour l’agrandir.</p>
+    </div>
+
+    <div class="wrap">
+      <!-- Les images 1.jpg à 49.jpg sont ajoutées par script.js (modifiez COUNT pour en ajouter) -->
+      <div id="gallery" class="masonry"></div>
+    </div>
+
+    <section class="section" id="feedback" style="margin-top:60px">
+      <div class="wrap split">
+        <h2>Laissez votre avis</h2>
+        <div>
+          <form class="form" data-success="Merci pour votre commentaire !">
+            <div class="field">
+              <label for="fb-nom">Nom</label>
+              <input class="input" id="fb-nom" type="text" name="nom" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="fb-email">Email</label>
+              <input class="input" id="fb-email" type="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="fb-msg">Commentaire</label>
+              <textarea class="input" id="fb-msg" name="commentaire" rows="5" required></textarea>
+            </div>
+            <div><button class="btn" type="submit">Envoyer mon avis</button></div>
+          </form>
+          <p class="form-status" role="status"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="lightbox" class="lb" aria-label="Visionneuse d’images">
+    <figure>
+      <img alt="">
+      <figcaption></figcaption>
+    </figure>
+    <button class="lb-btn lb-close" type="button" aria-label="Fermer">✕</button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Image précédente">‹</button>
+    <button class="lb-btn lb-next" type="button" aria-label="Image suivante">›</button>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <p><strong>CulturaZone</strong></p>
+        <p>Créé par Yassin Wannassi</p>
+      </div>
+      <address>
+        <a href="tel:+21627876977">📞 +216 27 876 977</a>
+        <a href="mailto:yassinwannassi01@gmail.com">📧 yassinwannassi01@gmail.com</a>
+      </address>
+    </div>
+  </footer>
+</body>
+</html>
